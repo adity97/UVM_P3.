@@ -1,0 +1,373 @@
+# //  Questa Sim
+# //  Version 10.7c linux Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -i -sv_seed 1 "+UVM_TESTNAME=test_top" -permit_unmatched_virtual_intf "+notimingchecks" -suppress 8887 -solvefaildebug -solvefailtestcase -assertdebug -uvmcontrol=all "+uvm_set_config_int=*,enable_transaction_viewing,1" -classdebug -msgmode tran -do " set NoQuitOnFinish 1; run 0; do wave.do" optimized_debug_top_tb 
+# Start time: 14:00:48 on Oct 25,2020
+# Loading sv_std.std
+# Loading work.decode_out_driver_bfm(fast)
+# Loading work.decode_out_monitor_bfm(fast)
+# Loading work.uvmf_base_pkg_hdl(fast)
+# Loading work.decode_out_pkg_hdl(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.uvmf_base_pkg(fast)
+# Loading work.decode_out_pkg(fast)
+# Loading work.decode_in_driver_bfm(fast)
+# Loading work.decode_in_monitor_bfm(fast)
+# Loading work.decode_in_pkg_hdl(fast)
+# Loading work.decode_in_pkg(fast)
+# Loading work.lc3_prediction_pkg(fast)
+# Loading work.decode_env_pkg(fast)
+# Loading work.decode_test_pkg(fast)
+# Loading work.hvl_top_sv_unit(fast)
+# Loading work.hvl_top(fast)
+# Loading work.hdl_top(fast)
+# Loading work.decode_in_if_sv_unit(fast)
+# Loading work.decode_in_if(fast__1)
+# Loading work.decode_in_driver_bfm_sv_unit(fast)
+# Loading work.decode_in_driver_bfm(fast)
+# Loading work.decode_in_monitor_bfm_sv_unit(fast)
+# Loading work.decode_in_monitor_bfm(fast)
+# Loading work.decode_out_if_sv_unit(fast)
+# Loading work.decode_out_if(fast__1)
+# Loading work.decode_out_driver_bfm_sv_unit(fast)
+# Loading work.decode_out_driver_bfm(fast)
+# Loading work.decode_out_monitor_bfm_sv_unit(fast)
+# Loading work.decode_out_monitor_bfm(fast)
+# Loading work.Decode(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.decode_in_if(fast)
+# Loading work.decode_out_if(fast)
+# Loading /afs/eos.ncsu.edu/dist/mg_apps/questa10.7c/uvm-1.1d/linux/uvm_dpi.so
+#  set NoQuitOnFinish 1
+# 1
+#  run 0
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# ----------------------------------------------------------------
+# //  UVM Framework 
+# //  Version 2019.4_2
+# //  (C) 2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# ----------------------------------------------------------------
+# 
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test test_top...
+# UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_int=*,enable_transaction_viewing,1
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+#  do wave.do
+run -all
+# UVM_INFO @ 25: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 35: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x04fb E_Control:0x06 npc_out:0xce0d Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x04fb E_Control:0x06 npc_out:0xce0d Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 35: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x0 sr2:0x0 dr:0x6 baser:0x1 pcoffset9:0x0fb pcoffset6:0x0d imm5:0x19 n:0x0 z:0x1 p:0x0 instruction:0x04fb enable_decode:0x0 npc_in:0xce0d middle_bit:0x1 
+# UVM_INFO @ 55: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 75: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x088a E_Control:0x06 npc_out:0xaf8b Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x088a E_Control:0x06 npc_out:0xaf8b Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 75: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x1 sr2:0x5 dr:0x0 baser:0x3 pcoffset9:0x08a pcoffset6:0x24 imm5:0x16 n:0x1 z:0x0 p:0x0 instruction:0x088a enable_decode:0x0 npc_in:0xaf8b middle_bit:0x0 
+# UVM_INFO @ 95: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 115: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x0a4d E_Control:0x06 npc_out:0xa4d1 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x0a4d E_Control:0x06 npc_out:0xa4d1 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 115: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x4 sr2:0x2 dr:0x5 baser:0x0 pcoffset9:0x04d pcoffset6:0x13 imm5:0x1c n:0x1 z:0x0 p:0x1 instruction:0x0a4d enable_decode:0x0 npc_in:0xa4d1 middle_bit:0x1 
+# UVM_INFO @ 135: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 155: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x07f8 E_Control:0x06 npc_out:0xa547 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x07f8 E_Control:0x06 npc_out:0xa547 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 155: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x3 sr2:0x0 dr:0x6 baser:0x4 pcoffset9:0x1f8 pcoffset6:0x3e imm5:0x0a n:0x0 z:0x1 p:0x1 instruction:0x07f8 enable_decode:0x0 npc_in:0xa547 middle_bit:0x0 
+# UVM_INFO @ 175: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 195: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x7a9d E_Control:0x08 npc_out:0x47ff Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x7a9d E_Control:0x08 npc_out:0x47ff Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 195: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x7 sr1:0x5 sr2:0x5 dr:0x5 baser:0x2 pcoffset9:0x002 pcoffset6:0x1d imm5:0x15 n:0x0 z:0x1 p:0x1 instruction:0x7a9d enable_decode:0x0 npc_in:0x47ff middle_bit:0x1 
+# UVM_INFO @ 215: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 235: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x790f E_Control:0x08 npc_out:0x72da Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x790f E_Control:0x08 npc_out:0x72da Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 235: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x7 sr1:0x4 sr2:0x4 dr:0x6 baser:0x4 pcoffset9:0x1d0 pcoffset6:0x0f imm5:0x18 n:0x1 z:0x0 p:0x0 instruction:0x790f enable_decode:0x0 npc_in:0x72da middle_bit:0x0 
+# UVM_INFO @ 255: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 275: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x79de E_Control:0x08 npc_out:0x6ccb Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x79de E_Control:0x08 npc_out:0x6ccb Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 275: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x7 sr1:0x4 sr2:0x0 dr:0x0 baser:0x7 pcoffset9:0x1d7 pcoffset6:0x1e imm5:0x07 n:0x0 z:0x0 p:0x1 instruction:0x79de enable_decode:0x0 npc_in:0x6ccb middle_bit:0x0 
+# UVM_INFO @ 295: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 315: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x98ff E_Control:0x20 npc_out:0x1036 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x98ff E_Control:0x20 npc_out:0x1036 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 315: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x3 sr2:0x7 dr:0x4 baser:0x2 pcoffset9:0x0cc pcoffset6:0x39 imm5:0x18 n:0x1 z:0x0 p:0x1 instruction:0x98ff enable_decode:0x0 npc_in:0x1036 middle_bit:0x1 
+# UVM_INFO @ 335: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 355: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xe989 E_Control:0x06 npc_out:0x3ac3 Mem_Control:0x0 W_Control:0x2 ACTUAL: IR:0xe989 E_Control:0x06 npc_out:0x3ac3 Mem_Control:0x0 W_Control:0x2 
+# UVM_INFO @ 355: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xe sr1:0x0 sr2:0x1 dr:0x4 baser:0x0 pcoffset9:0x189 pcoffset6:0x3f imm5:0x1c n:0x0 z:0x0 p:0x0 instruction:0xe989 enable_decode:0x0 npc_in:0x3ac3 middle_bit:0x1 
+# UVM_INFO @ 375: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 395: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x08e6 E_Control:0x06 npc_out:0x5e58 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x08e6 E_Control:0x06 npc_out:0x5e58 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 395: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x3 sr2:0x1 dr:0x0 baser:0x2 pcoffset9:0x0e6 pcoffset6:0x0d imm5:0x0c n:0x1 z:0x0 p:0x0 instruction:0x08e6 enable_decode:0x0 npc_in:0x5e58 middle_bit:0x0 
+# UVM_INFO @ 415: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 435: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x937f E_Control:0x20 npc_out:0xd808 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x937f E_Control:0x20 npc_out:0xd808 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 435: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x5 sr2:0x6 dr:0x1 baser:0x2 pcoffset9:0x1b8 pcoffset6:0x1d imm5:0x13 n:0x0 z:0x1 p:0x1 instruction:0x937f enable_decode:0x0 npc_in:0xd808 middle_bit:0x1 
+# UVM_INFO @ 455: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 475: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x394b E_Control:0x06 npc_out:0x89a1 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x394b E_Control:0x06 npc_out:0x89a1 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 475: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x3 sr1:0x4 sr2:0x6 dr:0x3 baser:0x0 pcoffset9:0x14b pcoffset6:0x01 imm5:0x04 n:0x0 z:0x0 p:0x0 instruction:0x394b enable_decode:0x0 npc_in:0x89a1 middle_bit:0x0 
+# UVM_INFO @ 495: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 515: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x90ff E_Control:0x20 npc_out:0x7cee Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x90ff E_Control:0x20 npc_out:0x7cee Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 515: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x3 sr2:0x4 dr:0x0 baser:0x7 pcoffset9:0x062 pcoffset6:0x06 imm5:0x12 n:0x1 z:0x0 p:0x1 instruction:0x90ff enable_decode:0x0 npc_in:0x7cee middle_bit:0x1 
+# UVM_INFO @ 535: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 555: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x23a2 E_Control:0x06 npc_out:0xb4eb Mem_Control:0x0 W_Control:0x1 ACTUAL: IR:0x23a2 E_Control:0x06 npc_out:0xb4eb Mem_Control:0x0 W_Control:0x1 
+# UVM_INFO @ 555: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x2 sr1:0x7 sr2:0x4 dr:0x1 baser:0x1 pcoffset9:0x1a2 pcoffset6:0x07 imm5:0x03 n:0x1 z:0x1 p:0x1 instruction:0x23a2 enable_decode:0x0 npc_in:0xb4eb middle_bit:0x0 
+# UVM_INFO @ 575: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 595: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x66fb E_Control:0x08 npc_out:0x402b Mem_Control:0x0 W_Control:0x1 ACTUAL: IR:0x66fb E_Control:0x08 npc_out:0x402b Mem_Control:0x0 W_Control:0x1 
+# UVM_INFO @ 595: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x6 sr1:0x5 sr2:0x7 dr:0x3 baser:0x3 pcoffset9:0x041 pcoffset6:0x3b imm5:0x0d n:0x1 z:0x0 p:0x0 instruction:0x66fb enable_decode:0x0 npc_in:0x402b middle_bit:0x1 
+# UVM_INFO @ 615: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 635: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x993f E_Control:0x20 npc_out:0x7753 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x993f E_Control:0x20 npc_out:0x7753 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 635: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x4 sr2:0x2 dr:0x4 baser:0x0 pcoffset9:0x0d1 pcoffset6:0x17 imm5:0x14 n:0x0 z:0x1 p:0x0 instruction:0x993f enable_decode:0x0 npc_in:0x7753 middle_bit:0x1 
+# UVM_INFO @ 655: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 675: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x576a E_Control:0x10 npc_out:0x39f2 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x576a E_Control:0x10 npc_out:0x39f2 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 675: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x5 sr1:0x5 sr2:0x6 dr:0x3 baser:0x2 pcoffset9:0x0dd pcoffset6:0x02 imm5:0x0a n:0x1 z:0x0 p:0x1 instruction:0x576a enable_decode:0x0 npc_in:0x39f2 middle_bit:0x1 
+# UVM_INFO @ 695: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 715: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x2972 E_Control:0x06 npc_out:0x4392 Mem_Control:0x0 W_Control:0x1 ACTUAL: IR:0x2972 E_Control:0x06 npc_out:0x4392 Mem_Control:0x0 W_Control:0x1 
+# UVM_INFO @ 715: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x2 sr1:0x0 sr2:0x3 dr:0x4 baser:0x0 pcoffset9:0x172 pcoffset6:0x3c imm5:0x1f n:0x0 z:0x1 p:0x1 instruction:0x2972 enable_decode:0x0 npc_in:0x4392 middle_bit:0x0 
+# UVM_INFO @ 735: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 755: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xe7d3 E_Control:0x06 npc_out:0xc09e Mem_Control:0x0 W_Control:0x2 ACTUAL: IR:0xe7d3 E_Control:0x06 npc_out:0xc09e Mem_Control:0x0 W_Control:0x2 
+# UVM_INFO @ 755: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xe sr1:0x3 sr2:0x0 dr:0x3 baser:0x5 pcoffset9:0x1d3 pcoffset6:0x21 imm5:0x12 n:0x1 z:0x1 p:0x0 instruction:0xe7d3 enable_decode:0x0 npc_in:0xc09e middle_bit:0x0 
+# UVM_INFO @ 775: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 795: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xae21 E_Control:0x06 npc_out:0x710b Mem_Control:0x1 W_Control:0x1 ACTUAL: IR:0xae21 E_Control:0x06 npc_out:0x710b Mem_Control:0x1 W_Control:0x1 
+# UVM_INFO @ 795: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xa sr1:0x5 sr2:0x5 dr:0x7 baser:0x3 pcoffset9:0x021 pcoffset6:0x04 imm5:0x19 n:0x1 z:0x0 p:0x0 instruction:0xae21 enable_decode:0x0 npc_in:0x710b middle_bit:0x0 
+# UVM_INFO @ 815: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 835: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xbd9f E_Control:0x06 npc_out:0x57ea Mem_Control:0x1 W_Control:0x0 ACTUAL: IR:0xbd9f E_Control:0x06 npc_out:0x57ea Mem_Control:0x1 W_Control:0x0 
+# UVM_INFO @ 835: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xb sr1:0x6 sr2:0x6 dr:0x3 baser:0x6 pcoffset9:0x19f pcoffset6:0x08 imm5:0x16 n:0x0 z:0x1 p:0x1 instruction:0xbd9f enable_decode:0x0 npc_in:0x57ea middle_bit:0x0 
+# UVM_INFO @ 855: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 875: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xa6c4 E_Control:0x06 npc_out:0x1d23 Mem_Control:0x1 W_Control:0x1 ACTUAL: IR:0xa6c4 E_Control:0x06 npc_out:0x1d23 Mem_Control:0x1 W_Control:0x1 
+# UVM_INFO @ 875: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xa sr1:0x3 sr2:0x5 dr:0x3 baser:0x0 pcoffset9:0x0c4 pcoffset6:0x3c imm5:0x0f n:0x0 z:0x0 p:0x1 instruction:0xa6c4 enable_decode:0x0 npc_in:0x1d23 middle_bit:0x1 
+# UVM_INFO @ 895: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 915: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xadcc E_Control:0x06 npc_out:0x5e07 Mem_Control:0x1 W_Control:0x1 ACTUAL: IR:0xadcc E_Control:0x06 npc_out:0x5e07 Mem_Control:0x1 W_Control:0x1 
+# UVM_INFO @ 915: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xa sr1:0x3 sr2:0x0 dr:0x6 baser:0x6 pcoffset9:0x1cc pcoffset6:0x04 imm5:0x16 n:0x0 z:0x0 p:0x0 instruction:0xadcc enable_decode:0x0 npc_in:0x5e07 middle_bit:0x1 
+# UVM_INFO @ 935: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 955: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x0e31 E_Control:0x06 npc_out:0x2940 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x0e31 E_Control:0x06 npc_out:0x2940 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 955: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x0 sr2:0x3 dr:0x7 baser:0x3 pcoffset9:0x031 pcoffset6:0x0e imm5:0x03 n:0x1 z:0x1 p:0x1 instruction:0x0e31 enable_decode:0x0 npc_in:0x2940 middle_bit:0x0 
+# UVM_INFO @ 975: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 995: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x3ff9 E_Control:0x06 npc_out:0x8f35 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x3ff9 E_Control:0x06 npc_out:0x8f35 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 995: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x3 sr1:0x7 sr2:0x5 dr:0x0 baser:0x5 pcoffset9:0x1f9 pcoffset6:0x03 imm5:0x18 n:0x0 z:0x0 p:0x0 instruction:0x3ff9 enable_decode:0x0 npc_in:0x8f35 middle_bit:0x0 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 995: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO @ 995: uvm_test_top.d_env.d_scbd [SCBD] SCOREBOARD_RESULTS:  PREDICTED_TRANSACTIONS=25 MATCHES=25 MISMATCHES=0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   81
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [PRED]    25
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCBD]    26
+# [SEQ]    25
+# [TEST_DONE]     1
+# [UVM_CMDLINE_PROC]     1
+# ** Note: $finish    : /afs/eos.ncsu.edu/dist/mg_apps/questa10.7c/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 995 ns  Iteration: 61  Instance: /hvl_top
+# Break in Task uvm_pkg/uvm_root::run_test at /afs/eos.ncsu.edu/dist/mg_apps/questa10.7c/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+restart -f
+# Loading work.decode_out_driver_bfm(fast)
+# Loading work.decode_out_monitor_bfm(fast)
+# Loading work.uvmf_base_pkg_hdl(fast)
+# Loading work.decode_out_pkg_hdl(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.uvmf_base_pkg(fast)
+# Loading work.decode_out_pkg(fast)
+# Loading work.decode_in_driver_bfm(fast)
+# Loading work.decode_in_monitor_bfm(fast)
+# Loading work.decode_in_pkg_hdl(fast)
+# Loading work.decode_in_pkg(fast)
+# Loading work.lc3_prediction_pkg(fast)
+# Loading work.decode_env_pkg(fast)
+# Loading work.decode_test_pkg(fast)
+# Loading work.hvl_top_sv_unit(fast)
+# Loading work.hvl_top(fast)
+# Loading work.hdl_top(fast)
+# Loading work.decode_in_if_sv_unit(fast)
+# Loading work.decode_in_if(fast__1)
+# Loading work.decode_in_driver_bfm_sv_unit(fast)
+# Loading work.decode_in_driver_bfm(fast)
+# Loading work.decode_in_monitor_bfm_sv_unit(fast)
+# Loading work.decode_in_monitor_bfm(fast)
+# Loading work.decode_out_if_sv_unit(fast)
+# Loading work.decode_out_if(fast__1)
+# Loading work.decode_out_driver_bfm_sv_unit(fast)
+# Loading work.decode_out_driver_bfm(fast)
+# Loading work.decode_out_monitor_bfm_sv_unit(fast)
+# Loading work.decode_out_monitor_bfm(fast)
+# Loading work.Decode(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.decode_in_if(fast)
+# Loading work.decode_out_if(fast)
+# Loading /afs/eos.ncsu.edu/dist/mg_apps/questa10.7c/uvm-1.1d/linux/uvm_dpi.so
+# Warning in wave window restart: (vish-4014) No objects found matching '/uvm_root/uvm_test_top/d_env/din_agent/din_agent_monitor/txn_stream'. 
+# Warning in wave window restart: (vish-4014) No objects found matching '/uvm_root/uvm_test_top/d_env/dout_agent/dout_agent_monitor/txn_stream'. 
+run 0
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# ----------------------------------------------------------------
+# //  UVM Framework 
+# //  Version 2019.4_2
+# //  (C) 2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# ----------------------------------------------------------------
+# 
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(216) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test test_top...
+# UVM_INFO @ 0: reporter [UVM_CMDLINE_PROC] Applying config setting from the command line: +uvm_set_config_int=*,enable_transaction_viewing,1
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+add wave -position insertpoint  \
+sim:/uvm_root/uvm_test_top/d_env/din_agent/din_agent_monitor/txn_stream \
+sim:/uvm_root/uvm_test_top/d_env/dout_agent/dout_agent_monitor/txn_stream
+add wave sim:/hdl_top/dif/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /afs/unity.ncsu.edu/users/a/aprasad5/uvm/2b/uvmf_template_output/project_benches/decode/sim/wave.do
+do wave.do
+run -all
+# UVM_INFO @ 25: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 35: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x04fb E_Control:0x06 npc_out:0xce0d Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x04fb E_Control:0x06 npc_out:0xce0d Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 35: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x0 sr2:0x0 dr:0x6 baser:0x1 pcoffset9:0x0fb pcoffset6:0x0d imm5:0x19 n:0x0 z:0x1 p:0x0 instruction:0x04fb enable_decode:0x0 npc_in:0xce0d middle_bit:0x1 
+# UVM_INFO @ 55: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 75: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x088a E_Control:0x06 npc_out:0xaf8b Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x088a E_Control:0x06 npc_out:0xaf8b Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 75: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x1 sr2:0x5 dr:0x0 baser:0x3 pcoffset9:0x08a pcoffset6:0x24 imm5:0x16 n:0x1 z:0x0 p:0x0 instruction:0x088a enable_decode:0x0 npc_in:0xaf8b middle_bit:0x0 
+# UVM_INFO @ 95: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 115: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x0a4d E_Control:0x06 npc_out:0xa4d1 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x0a4d E_Control:0x06 npc_out:0xa4d1 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 115: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x4 sr2:0x2 dr:0x5 baser:0x0 pcoffset9:0x04d pcoffset6:0x13 imm5:0x1c n:0x1 z:0x0 p:0x1 instruction:0x0a4d enable_decode:0x0 npc_in:0xa4d1 middle_bit:0x1 
+# UVM_INFO @ 135: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 155: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x07f8 E_Control:0x06 npc_out:0xa547 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x07f8 E_Control:0x06 npc_out:0xa547 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 155: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x3 sr2:0x0 dr:0x6 baser:0x4 pcoffset9:0x1f8 pcoffset6:0x3e imm5:0x0a n:0x0 z:0x1 p:0x1 instruction:0x07f8 enable_decode:0x0 npc_in:0xa547 middle_bit:0x0 
+# UVM_INFO @ 175: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 195: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x7a9d E_Control:0x08 npc_out:0x47ff Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x7a9d E_Control:0x08 npc_out:0x47ff Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 195: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x7 sr1:0x5 sr2:0x5 dr:0x5 baser:0x2 pcoffset9:0x002 pcoffset6:0x1d imm5:0x15 n:0x0 z:0x1 p:0x1 instruction:0x7a9d enable_decode:0x0 npc_in:0x47ff middle_bit:0x1 
+# UVM_INFO @ 215: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 235: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x790f E_Control:0x08 npc_out:0x72da Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x790f E_Control:0x08 npc_out:0x72da Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 235: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x7 sr1:0x4 sr2:0x4 dr:0x6 baser:0x4 pcoffset9:0x1d0 pcoffset6:0x0f imm5:0x18 n:0x1 z:0x0 p:0x0 instruction:0x790f enable_decode:0x0 npc_in:0x72da middle_bit:0x0 
+# UVM_INFO @ 255: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 275: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x79de E_Control:0x08 npc_out:0x6ccb Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x79de E_Control:0x08 npc_out:0x6ccb Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 275: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x7 sr1:0x4 sr2:0x0 dr:0x0 baser:0x7 pcoffset9:0x1d7 pcoffset6:0x1e imm5:0x07 n:0x0 z:0x0 p:0x1 instruction:0x79de enable_decode:0x0 npc_in:0x6ccb middle_bit:0x0 
+# UVM_INFO @ 295: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 315: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x98ff E_Control:0x20 npc_out:0x1036 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x98ff E_Control:0x20 npc_out:0x1036 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 315: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x3 sr2:0x7 dr:0x4 baser:0x2 pcoffset9:0x0cc pcoffset6:0x39 imm5:0x18 n:0x1 z:0x0 p:0x1 instruction:0x98ff enable_decode:0x0 npc_in:0x1036 middle_bit:0x1 
+# UVM_INFO @ 335: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 355: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xe989 E_Control:0x06 npc_out:0x3ac3 Mem_Control:0x0 W_Control:0x2 ACTUAL: IR:0xe989 E_Control:0x06 npc_out:0x3ac3 Mem_Control:0x0 W_Control:0x2 
+# UVM_INFO @ 355: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xe sr1:0x0 sr2:0x1 dr:0x4 baser:0x0 pcoffset9:0x189 pcoffset6:0x3f imm5:0x1c n:0x0 z:0x0 p:0x0 instruction:0xe989 enable_decode:0x0 npc_in:0x3ac3 middle_bit:0x1 
+# UVM_INFO @ 375: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 395: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x08e6 E_Control:0x06 npc_out:0x5e58 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x08e6 E_Control:0x06 npc_out:0x5e58 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 395: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x3 sr2:0x1 dr:0x0 baser:0x2 pcoffset9:0x0e6 pcoffset6:0x0d imm5:0x0c n:0x1 z:0x0 p:0x0 instruction:0x08e6 enable_decode:0x0 npc_in:0x5e58 middle_bit:0x0 
+# UVM_INFO @ 415: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 435: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x937f E_Control:0x20 npc_out:0xd808 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x937f E_Control:0x20 npc_out:0xd808 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 435: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x5 sr2:0x6 dr:0x1 baser:0x2 pcoffset9:0x1b8 pcoffset6:0x1d imm5:0x13 n:0x0 z:0x1 p:0x1 instruction:0x937f enable_decode:0x0 npc_in:0xd808 middle_bit:0x1 
+# UVM_INFO @ 455: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 475: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x394b E_Control:0x06 npc_out:0x89a1 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x394b E_Control:0x06 npc_out:0x89a1 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 475: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x3 sr1:0x4 sr2:0x6 dr:0x3 baser:0x0 pcoffset9:0x14b pcoffset6:0x01 imm5:0x04 n:0x0 z:0x0 p:0x0 instruction:0x394b enable_decode:0x0 npc_in:0x89a1 middle_bit:0x0 
+# UVM_INFO @ 495: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 515: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x90ff E_Control:0x20 npc_out:0x7cee Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x90ff E_Control:0x20 npc_out:0x7cee Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 515: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x3 sr2:0x4 dr:0x0 baser:0x7 pcoffset9:0x062 pcoffset6:0x06 imm5:0x12 n:0x1 z:0x0 p:0x1 instruction:0x90ff enable_decode:0x0 npc_in:0x7cee middle_bit:0x1 
+# UVM_INFO @ 535: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 555: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x23a2 E_Control:0x06 npc_out:0xb4eb Mem_Control:0x0 W_Control:0x1 ACTUAL: IR:0x23a2 E_Control:0x06 npc_out:0xb4eb Mem_Control:0x0 W_Control:0x1 
+# UVM_INFO @ 555: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x2 sr1:0x7 sr2:0x4 dr:0x1 baser:0x1 pcoffset9:0x1a2 pcoffset6:0x07 imm5:0x03 n:0x1 z:0x1 p:0x1 instruction:0x23a2 enable_decode:0x0 npc_in:0xb4eb middle_bit:0x0 
+# UVM_INFO @ 575: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 595: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x66fb E_Control:0x08 npc_out:0x402b Mem_Control:0x0 W_Control:0x1 ACTUAL: IR:0x66fb E_Control:0x08 npc_out:0x402b Mem_Control:0x0 W_Control:0x1 
+# UVM_INFO @ 595: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x6 sr1:0x5 sr2:0x7 dr:0x3 baser:0x3 pcoffset9:0x041 pcoffset6:0x3b imm5:0x0d n:0x1 z:0x0 p:0x0 instruction:0x66fb enable_decode:0x0 npc_in:0x402b middle_bit:0x1 
+# UVM_INFO @ 615: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 635: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x993f E_Control:0x20 npc_out:0x7753 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x993f E_Control:0x20 npc_out:0x7753 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 635: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x9 sr1:0x4 sr2:0x2 dr:0x4 baser:0x0 pcoffset9:0x0d1 pcoffset6:0x17 imm5:0x14 n:0x0 z:0x1 p:0x0 instruction:0x993f enable_decode:0x0 npc_in:0x7753 middle_bit:0x1 
+# UVM_INFO @ 655: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 675: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x576a E_Control:0x10 npc_out:0x39f2 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x576a E_Control:0x10 npc_out:0x39f2 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 675: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x5 sr1:0x5 sr2:0x6 dr:0x3 baser:0x2 pcoffset9:0x0dd pcoffset6:0x02 imm5:0x0a n:0x1 z:0x0 p:0x1 instruction:0x576a enable_decode:0x0 npc_in:0x39f2 middle_bit:0x1 
+# UVM_INFO @ 695: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 715: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x2972 E_Control:0x06 npc_out:0x4392 Mem_Control:0x0 W_Control:0x1 ACTUAL: IR:0x2972 E_Control:0x06 npc_out:0x4392 Mem_Control:0x0 W_Control:0x1 
+# UVM_INFO @ 715: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x2 sr1:0x0 sr2:0x3 dr:0x4 baser:0x0 pcoffset9:0x172 pcoffset6:0x3c imm5:0x1f n:0x0 z:0x1 p:0x1 instruction:0x2972 enable_decode:0x0 npc_in:0x4392 middle_bit:0x0 
+# UVM_INFO @ 735: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 755: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xe7d3 E_Control:0x06 npc_out:0xc09e Mem_Control:0x0 W_Control:0x2 ACTUAL: IR:0xe7d3 E_Control:0x06 npc_out:0xc09e Mem_Control:0x0 W_Control:0x2 
+# UVM_INFO @ 755: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xe sr1:0x3 sr2:0x0 dr:0x3 baser:0x5 pcoffset9:0x1d3 pcoffset6:0x21 imm5:0x12 n:0x1 z:0x1 p:0x0 instruction:0xe7d3 enable_decode:0x0 npc_in:0xc09e middle_bit:0x0 
+# UVM_INFO @ 775: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 795: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xae21 E_Control:0x06 npc_out:0x710b Mem_Control:0x1 W_Control:0x1 ACTUAL: IR:0xae21 E_Control:0x06 npc_out:0x710b Mem_Control:0x1 W_Control:0x1 
+# UVM_INFO @ 795: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xa sr1:0x5 sr2:0x5 dr:0x7 baser:0x3 pcoffset9:0x021 pcoffset6:0x04 imm5:0x19 n:0x1 z:0x0 p:0x0 instruction:0xae21 enable_decode:0x0 npc_in:0x710b middle_bit:0x0 
+# UVM_INFO @ 815: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 835: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xbd9f E_Control:0x06 npc_out:0x57ea Mem_Control:0x1 W_Control:0x0 ACTUAL: IR:0xbd9f E_Control:0x06 npc_out:0x57ea Mem_Control:0x1 W_Control:0x0 
+# UVM_INFO @ 835: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xb sr1:0x6 sr2:0x6 dr:0x3 baser:0x6 pcoffset9:0x19f pcoffset6:0x08 imm5:0x16 n:0x0 z:0x1 p:0x1 instruction:0xbd9f enable_decode:0x0 npc_in:0x57ea middle_bit:0x0 
+# UVM_INFO @ 855: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 875: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xa6c4 E_Control:0x06 npc_out:0x1d23 Mem_Control:0x1 W_Control:0x1 ACTUAL: IR:0xa6c4 E_Control:0x06 npc_out:0x1d23 Mem_Control:0x1 W_Control:0x1 
+# UVM_INFO @ 875: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xa sr1:0x3 sr2:0x5 dr:0x3 baser:0x0 pcoffset9:0x0c4 pcoffset6:0x3c imm5:0x0f n:0x0 z:0x0 p:0x1 instruction:0xa6c4 enable_decode:0x0 npc_in:0x1d23 middle_bit:0x1 
+# UVM_INFO @ 895: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 915: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0xadcc E_Control:0x06 npc_out:0x5e07 Mem_Control:0x1 W_Control:0x1 ACTUAL: IR:0xadcc E_Control:0x06 npc_out:0x5e07 Mem_Control:0x1 W_Control:0x1 
+# UVM_INFO @ 915: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0xa sr1:0x3 sr2:0x0 dr:0x6 baser:0x6 pcoffset9:0x1cc pcoffset6:0x04 imm5:0x16 n:0x0 z:0x0 p:0x0 instruction:0xadcc enable_decode:0x0 npc_in:0x5e07 middle_bit:0x1 
+# UVM_INFO @ 935: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 955: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x0e31 E_Control:0x06 npc_out:0x2940 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x0e31 E_Control:0x06 npc_out:0x2940 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 955: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x0 sr1:0x0 sr2:0x3 dr:0x7 baser:0x3 pcoffset9:0x031 pcoffset6:0x0e imm5:0x03 n:0x1 z:0x1 p:0x1 instruction:0x0e31 enable_decode:0x0 npc_in:0x2940 middle_bit:0x0 
+# UVM_INFO @ 975: uvm_test_top.d_env.pred [PRED] Transaction Received through port_decode_in
+# UVM_INFO @ 995: uvm_test_top.d_env.d_scbd [SCBD] MATCH! - EXPECTED: IR:0x3ff9 E_Control:0x06 npc_out:0x8f35 Mem_Control:0x0 W_Control:0x0 ACTUAL: IR:0x3ff9 E_Control:0x06 npc_out:0x8f35 Mem_Control:0x0 W_Control:0x0 
+# UVM_INFO @ 995: uvm_test_top.d_env.din_agent.sequencer@@d_seq [SEQ] Response:opcode:0x3 sr1:0x7 sr2:0x5 dr:0x0 baser:0x5 pcoffset9:0x1f9 pcoffset6:0x03 imm5:0x18 n:0x0 z:0x0 p:0x0 instruction:0x3ff9 enable_decode:0x0 npc_in:0x8f35 middle_bit:0x0 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 995: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO @ 995: uvm_test_top.d_env.d_scbd [SCBD] SCOREBOARD_RESULTS:  PREDICTED_TRANSACTIONS=25 MATCHES=25 MISMATCHES=0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   81
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [PRED]    25
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCBD]    26
+# [SEQ]    25
+# [TEST_DONE]     1
+# [UVM_CMDLINE_PROC]     1
+# ** Note: $finish    : /afs/eos.ncsu.edu/dist/mg_apps/questa10.7c/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 995 ns  Iteration: 61  Instance: /hvl_top
+# Break in Task uvm_pkg/uvm_root::run_test at /afs/eos.ncsu.edu/dist/mg_apps/questa10.7c/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# End time: 14:10:13 on Oct 25,2020, Elapsed time: 0:09:25
+# Errors: 2, Warnings: 0

@@ -1,0 +1,46 @@
+Sat Sep 19 19:22:00 EDT 2020
+Trace back: grab failed: window not viewable
+    while executing
+"grab -global $menu"
+    (procedure "tk::MenuButtonDown" line 39)
+    invoked from within
+"tk::MenuButtonDown .main_pane.source.#main_pane#source#mBar"
+    (command bound to event)
+  <2:/afs/eos.ncsu.edu/dist/mg_apps/modelsimSE10.6c/linux_x86_64/tk8.6/bgerror.tcl:106: ::tkerror {grab failed: window not viewable}
+  <1:eval:1: ::tk::dialog::error::bgerror {grab failed: window not viewable}
+Mon Sep 21 15:42:48 EDT 2020
+Trace back: This command requires the vsim -classdebug switch.
+    while executing
+"::.windowmgr ShowWindowType uvmdetails"
+    ("eval" body line 1)
+    invoked from within
+"eval $vsimPriv(windowmgr) ShowWindowType $window_type"
+    while executing
+"view $type"
+    (procedure "toggleview_multiinstanced" line 10)
+    invoked from within
+"toggleview_multiinstanced $type"
+    (procedure "toggleview" line 5)
+    invoked from within
+"toggleview uvmdetails"
+    invoked from within
+".#mBar.#mBar#view invoke active"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke active]"
+    (procedure "tk::MenuInvoke" line 50)
+    invoked from within
+"tk::MenuInvoke .#mBar.#mBar#view 1"
+    (command bound to event)
+  <2:/afs/eos.ncsu.edu/dist/mg_apps/modelsimSE10.6c/linux_x86_64/tk8.6/bgerror.tcl:106: ::tkerror {This command requires the vsim -classdebug switch.
+    while executing
+"::.windowmgr ShowWindowType uvmdetails"
+    ("eval" body line 1)
+    invoked from within
+"eval $vsimPriv(windowmgr) ShowWindowType $window_type"}
+  <1:eval:1: ::tk::dialog::error::bgerror {This command requires the vsim -classdebug switch.
+    while executing
+"::.windowmgr ShowWindowType uvmdetails"
+    ("eval" body line 1)
+    invoked from within
+"eval $vsimPriv(windowmgr) ShowWindowType $window_type"}
